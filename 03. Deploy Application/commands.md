@@ -1,4 +1,4 @@
-### Kubectl commands
+/### Kubectl commands
 
 ##### apply manifests
     kubectl apply -f nginx-deployment.yaml
@@ -34,3 +34,11 @@
 ##### create pods
     kubectl run test-nginx-service --image=busybox
     kubectl exec -it {pod-name} -- bash
+
+#### verify service connection
+    after create pods, entering pod by:
+    kubectl exec -it test-nginx-svc -- bash
+    then in pod:
+    curl http://10.98.148.178:8080
+    curl nginx-service:8080
+
