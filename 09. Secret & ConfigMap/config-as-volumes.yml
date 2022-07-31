@@ -39,7 +39,7 @@ spec:
       containers:
       - name: my-db
         image: busybox:1.28
-        command: ['sh', '-c', "cat /mysql/db-config; cat /mysql/db-secret"]
+        command: ['sh', '-c', "cat /mysql/db-config/mysql.conf; cat /mysql/db-secret/secret.file"]
 
         volumeMounts:
         - name: db-config
